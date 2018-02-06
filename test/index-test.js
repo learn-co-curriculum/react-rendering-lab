@@ -36,4 +36,20 @@ describe('Circle', () => {
     wrapper.setProps({ color: 'red' });
     expect(spy.calledOnce).to.be.true;
   });
+
+});
+
+describe('Animation', () => {
+  it('componentWillUpdate is used to call showLoadingBar()', () => {
+    const spy = sinon.spy(Animation.prototype, 'componentWillUpdate')
+    expect(spy.calledOnce);
+  });
+});
+
+
+describe('Pikachu', () => {
+    it('componentDidUpdate is used to call resizePikachu() ', () => {
+      const spy = sinon.spy(Pikachu.prototype, 'componentDidUpdate')
+      expect(spy.calledOnce);
+    });
 });
